@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daftar Hadir Siswa TJKT</title>
+    <td><img border="0" src="C:\Users\AXIOO\Downloads\dc34ba85-117c-4b30-b876-56ea9842d6e6.jpg" width="50" height="50"></td>
+    <style>
+      body {
+        background-color: #ca9f9f;
+        font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+        color: #000000;
+      }
+      
+      h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+      }
+      
+      .form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #ebcccc;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      
+      input[type="text"],
+      input[type="tel"],
+      input[type="number"],
+      select {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        color: #444;
+      }
+      
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      
+      label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      
+      .form-group {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Daftar Hadir Siswa TJKT</h1>
+    <H1>Tanggal 13 April 2023</H1>
+    <div class="form">
+      <div class="form-group">
+        <label for="nama">Nama</label>
+        <input type="text" id="inputNama" name="nama"  autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="nis">NIS</label>
+        <input type="number" id="inputNis" name="nis"  autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="jurusan">Mapel</label>
+        <input type="text" id="inputMapel" name="ttl"  autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label for="hp">No. HP</label>
+        <input type="number" id="inputNohp" name="hp"  autocomplete="off">
+      </div>
+      <button onclick="setOutput()">hadir</button>
+    </div>
+    
+    <h1 id="output"></h1>
+    
+    <script>
+      function setOutput() {
+        const nama = document.getElementById('inputNama')
+        const nis = document.getElementById('inputNis')
+        const mapel = document.getElementById('inputMapel')
+        const hp = document.getElementById('inputNohp')
+        const output = document.getElementById('output')
+        output.innerHTML = nama.value + ' ' + nis.value + ' ' + mapel.value + ' ' + hp.value
+      }
+    </script>
+  </body>
+</html>
